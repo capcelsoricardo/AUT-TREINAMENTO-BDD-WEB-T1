@@ -8,7 +8,7 @@ Contexto:
     Então sou autenticado com sucesso
     
     @Sprint3 @Menu
-    Cenário: Itens apresentados no menu Catalog
+    Cenário: Validar os itens apresentados no menu Catalog
     	Dado que eu esteja na tela Home
     	Quando acesso o menu Catalog
     	Então são apresentados os itens "Catalogs", "Categories", "Base Product", "All Products", "Product Bundles", "Add-on Products", "Product Groups", "Product Options", "Cart Rules", "Manage Inventory" e "Locations"
