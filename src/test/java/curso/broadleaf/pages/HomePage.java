@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import curso.broadleaf.utils.Framework;
+
 public class HomePage {
 
 	public HomePage(WebDriver driver) {
@@ -18,10 +20,10 @@ public class HomePage {
 	WebElement tituloPagina;
 	
 	public boolean checkLogin() { 
-		return msgWelcome.isDisplayed();
+		return Framework.elementoExiste(msgWelcome);
 	}
 		
 	public boolean checkPage() { 
-		return tituloPagina.isDisplayed();
+		return Framework.elementoExiste(tituloPagina);
 	}
 }

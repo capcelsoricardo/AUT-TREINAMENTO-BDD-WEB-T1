@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		features = {"src/test/resources/features"},
 		glue = {"curso.broadleaf.steps", "curso.broadleaf.setup"},
 		snippets = SnippetType.CAMELCASE,
-		tags = {"@Sprint3"})
+		tags = {"@Sprint2"})
 
 public class RunnerTest {
 

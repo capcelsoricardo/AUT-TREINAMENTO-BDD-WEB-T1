@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import curso.broadleaf.utils.Framework;
+
 public class LoginPage {
 
 	public LoginPage(WebDriver driver) {
@@ -25,13 +27,13 @@ public class LoginPage {
 	
 
 	public boolean checkPage() { 
-		return botaoSignIn.isDisplayed();
+		return Framework.elementoExiste(botaoSignIn);
 	}
 	
 	public void realizarLogin(String user, String pass) {
-		campoUsuario.sendKeys(user);
-		campoPassword.sendKeys(pass);
-		botaoSignIn.click();
+		Framework.preencherCampo(campoUsuario, user);
+		Framework.preencherCampo(campoPassword, pass);
+		Framework.clicar(botaoSignIn);
 	}
 	
 	public boolean checkMsgLoginIncorreto(String mensagem) { 
